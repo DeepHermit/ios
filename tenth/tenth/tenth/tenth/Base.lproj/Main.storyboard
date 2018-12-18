@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tenth" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nwI-Hc-Czv">
+                                <rect key="frame" x="60" y="124" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="7ID-8L-pSh">
+                                <rect key="frame" x="70" y="439" width="235" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMg-b1-YkE">
+                                        <rect key="frame" x="0.0" y="0.0" width="38" height="30"/>
+                                        <state key="normal" title="move"/>
+                                        <connections>
+                                            <action selector="move:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zx0-pU-RkC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgH-eu-pyV">
+                                        <rect key="frame" x="88" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="size"/>
+                                        <connections>
+                                            <action selector="size:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HTd-zD-lnp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9X5-CY-8Fq">
+                                        <rect key="frame" x="168" y="0.0" width="67" height="30"/>
+                                        <state key="normal" title="transform"/>
+                                        <connections>
+                                            <action selector="transform:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S0p-BZ-5la"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7ID-8L-pSh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N73-Ja-NTB"/>
+                            <constraint firstItem="nwI-Hc-Czv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="104" id="OVz-SP-Clt"/>
+                            <constraint firstAttribute="bottom" secondItem="nwI-Hc-Czv" secondAttribute="bottom" constant="415" id="es4-a8-AkU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nwI-Hc-Czv" secondAttribute="trailing" constant="75" id="hcA-Ou-k3w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7ID-8L-pSh" secondAttribute="bottom" constant="198" id="l4Q-HK-1IG"/>
+                            <constraint firstItem="nwI-Hc-Czv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="vlD-rH-V1E"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="grayview" destination="nwI-Hc-Czv" id="Hkp-VW-YJX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="342" y="128"/>
+        </scene>
+    </scenes>
+</document>
