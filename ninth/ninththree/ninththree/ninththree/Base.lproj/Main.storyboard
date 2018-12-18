@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tle-we-waq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--scroll-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ninththree" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t8A-au-ISN">
+                                <rect key="frame" x="10" y="30" width="355" height="578"/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" translatesAutoresizingMaskIntoConstraints="NO" id="0iW-fx-U23">
+                                <rect key="frame" x="144" y="571" width="87" height="37"/>
+                                <color key="pageIndicatorTintColor" red="0.1676501027" green="0.49368254589999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="currentPageIndicatorTintColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="pageControlClicked:" destination="BYZ-38-t0r" eventType="valueChanged" id="re0-9u-o8N"/>
+                                </connections>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="t8A-au-ISN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="26i-04-poc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t8A-au-ISN" secondAttribute="trailing" constant="10" id="JJF-lY-hQq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0iW-fx-U23" secondAttribute="bottom" constant="10" id="OWE-q4-nUY"/>
+                            <constraint firstItem="t8A-au-ISN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="dfa-Ha-RWf"/>
+                            <constraint firstItem="0iW-fx-U23" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="djw-Wo-fDo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="t8A-au-ISN" secondAttribute="bottom" constant="10" id="uKV-Ns-y9K"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="scroll" id="1Vf-QV-Vov"/>
+                    <connections>
+                        <outlet property="pageControl" destination="0iW-fx-U23" id="X2I-5O-ESO"/>
+                        <outlet property="scrollView" destination="t8A-au-ISN" id="eGj-pp-sfB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1071.2" y="133.5832083958021"/>
+        </scene>
+        <!--pinch-->
+        <scene sceneID="1uK-nG-lFJ">
+            <objects>
+                <viewController id="x2d-BL-vti" customClass="pinchViewController" customModule="ninththree" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d8v-MS-maZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y2f-8M-s3z">
+                                <rect key="frame" x="10" y="30" width="355" height="578"/>
+                                <connections>
+                                    <outlet property="delegate" destination="x2d-BL-vti" id="EC6-Nn-FvR"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7su-5e-Za0" firstAttribute="trailing" secondItem="y2f-8M-s3z" secondAttribute="trailing" constant="10" id="SoR-yd-Yq2"/>
+                            <constraint firstItem="7su-5e-Za0" firstAttribute="bottom" secondItem="y2f-8M-s3z" secondAttribute="bottom" constant="10" id="UpP-tB-ni9"/>
+                            <constraint firstItem="y2f-8M-s3z" firstAttribute="top" secondItem="7su-5e-Za0" secondAttribute="top" constant="10" id="fQv-UA-n9c"/>
+                            <constraint firstItem="y2f-8M-s3z" firstAttribute="leading" secondItem="7su-5e-Za0" secondAttribute="leading" constant="10" id="olF-Oc-qwt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7su-5e-Za0"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="pinch" id="O1I-b6-ZRk"/>
+                    <connections>
+                        <outlet property="scrollControl" destination="y2f-8M-s3z" id="tkU-Cx-qqG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xQD-db-3tv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057" y="800"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="d3K-Re-VUQ">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="tle-we-waq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yXv-VD-9ff">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="WEP-rz-qcF"/>
+                        <segue destination="x2d-BL-vti" kind="relationship" relationship="viewControllers" id="VeL-3W-0yc"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e69-Nx-8Eb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
