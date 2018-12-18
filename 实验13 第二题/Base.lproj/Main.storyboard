@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="67w-9t-12N">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--城市列表-->
+        <scene sceneID="zUq-Cf-TAS">
+            <objects>
+                <tableViewController id="EPm-tH-ms6" customClass="TableViewController" customModule="实验13_第二题" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="x7x-jG-nqr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" red="0.50196081400000003" green="1" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="JxQ-Xx-Rl3">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JxQ-Xx-Rl3" id="zbj-cu-u8R">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="A3J-Sv-540" kind="show" id="SR8-2j-pEn"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="EPm-tH-ms6" id="fS7-FD-7qA"/>
+                            <outlet property="delegate" destination="EPm-tH-ms6" id="Kby-8Y-O65"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="城市列表" id="jLg-Wq-Vcu"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vf2-P9-H7g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="540" y="218.1409295352324"/>
+        </scene>
+        <!--天气-->
+        <scene sceneID="MaN-QI-57F">
+            <objects>
+                <viewController id="A3J-Sv-540" customClass="WeatherViewController" customModule="实验13_第二题" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Neb-uk-ddi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="ux2-fK-hgr">
+                                <rect key="frame" x="10" y="164" width="355" height="403"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="城市" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lwC-c7-uXg">
+                                        <rect key="frame" x="143" y="0.0" width="69.5" height="63.5"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="highlightedColor" red="0.60533747530000004" green="0.96926957000000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="天气" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5F-Oz-bDl">
+                                        <rect key="frame" x="143" y="113.5" width="69.5" height="63"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="highlightedColor" red="0.60533747530000004" green="0.96926957000000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最低温度" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LvC-yy-p7h">
+                                        <rect key="frame" x="143" y="226.5" width="69.5" height="63.5"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="highlightedColor" red="0.60533747530000004" green="0.96926957000000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最高温度" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kxz-Ku-God">
+                                        <rect key="frame" x="143" y="340" width="69.5" height="63"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="highlightedColor" red="0.60533747530000004" green="0.96926957000000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="lwC-c7-uXg" firstAttribute="height" secondItem="M5F-Oz-bDl" secondAttribute="height" id="6tu-df-CGu"/>
+                                    <constraint firstItem="Kxz-Ku-God" firstAttribute="width" secondItem="LvC-yy-p7h" secondAttribute="width" id="7sj-yt-xbx"/>
+                                    <constraint firstItem="lwC-c7-uXg" firstAttribute="height" secondItem="Kxz-Ku-God" secondAttribute="height" id="YeN-T7-V39"/>
+                                    <constraint firstItem="lwC-c7-uXg" firstAttribute="height" secondItem="LvC-yy-p7h" secondAttribute="height" id="ivF-wC-JgR"/>
+                                    <constraint firstItem="Kxz-Ku-God" firstAttribute="width" secondItem="M5F-Oz-bDl" secondAttribute="width" id="kjH-LL-gmy"/>
+                                    <constraint firstItem="Kxz-Ku-God" firstAttribute="width" secondItem="lwC-c7-uXg" secondAttribute="width" id="mBW-1K-DgU"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lCf-dU-bg0" firstAttribute="trailing" secondItem="ux2-fK-hgr" secondAttribute="trailing" constant="10" id="7f8-9I-rVN"/>
+                            <constraint firstItem="ux2-fK-hgr" firstAttribute="leading" secondItem="lCf-dU-bg0" secondAttribute="leading" constant="10" id="8lN-gj-FSu"/>
+                            <constraint firstItem="lCf-dU-bg0" firstAttribute="bottom" secondItem="ux2-fK-hgr" secondAttribute="bottom" constant="100" id="M5b-ua-Gee"/>
+                            <constraint firstItem="ux2-fK-hgr" firstAttribute="top" secondItem="lCf-dU-bg0" secondAttribute="top" constant="100" id="QFi-2e-ouG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lCf-dU-bg0"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="天气" id="pGK-P8-GJg"/>
+                    <connections>
+                        <outlet property="cityLabel" destination="lwC-c7-uXg" id="3xz-b2-zpq"/>
+                        <outlet property="heightTempLabel" destination="Kxz-Ku-God" id="9pE-8u-MWu"/>
+                        <outlet property="lowTempLabel" destination="LvC-yy-p7h" id="oYv-Br-LzS"/>
+                        <outlet property="weatherLabel" destination="M5F-Oz-bDl" id="PzK-Iz-uFg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fU5-xj-qLc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2024.8" y="251.42428785607197"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GMy-A2-tSR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="67w-9t-12N" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xMH-q3-oeD">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EPm-tH-ms6" kind="relationship" relationship="rootViewController" id="SRj-2g-0CE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7g7-up-12w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-169" y="218"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="P41-3w-cVr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JsL-Qp-ywm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fzL-3w-1qO">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="A3J-Sv-540" kind="relationship" relationship="rootViewController" id="Bda-da-pVW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oA9-4n-48C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028" y="910"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="SR8-2j-pEn"/>
+    </inferredMetricsTieBreakers>
+</document>
